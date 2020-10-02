@@ -4,11 +4,24 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "inquirer": "^7.3.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hallkr86/hw-11-note-taker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/hallkr86/hw-11-note-taker/issues"
+  },
+  "homepage": "https://github.com/hallkr86/hw-11-note-taker#readme"
 }

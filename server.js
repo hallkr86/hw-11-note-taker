@@ -9,16 +9,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-//require("./public/assets/js/index.js")(app);
 
-// viewed at http://localhost:8080
+
+
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
-// app.get('*', function(req, res) {
-//     res.sendFile(path.join(__dirname + '/public/index.html'));
-// });
+
 
 app.get('/notes', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/notes.html'));
@@ -49,8 +47,8 @@ app.post('/api/notes', function(req, res) {
         console.log(data);
         const updatedData = JSON.parse(data);
         db.push(req.body);
-        //updatedData.push(req.body);
-        //console.log(updatedData);
+        
+        
         fs.writeFile('./db/db.json', JSON.stringify(db), function(err) {
         if (err) throw err;
         res.json({
